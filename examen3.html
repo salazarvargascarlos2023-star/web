@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 3 - Programación</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #141828;
+            padding: 20px;
+        }
+
+        .contenedor {
+            background: #d9d2e9;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #141828;
+        }
+
+        .pregunta {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        button {
+            background: #8e7cc3;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6f61aa;
+        }
+
+        #resultado {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        /* BLOQUEO SI NO PASÓ UNIDAD 2 */
+        if (localStorage.getItem("unidad2_aprobada") !== "true") {
+            alert("Debes aprobar la Unidad 2 para continuar.");
+            window.location.href = "examen2.html";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h2>Examen Unidad 3 – Programación</h2>
+
+        <form id="formulario">
+
+            <!-- PREGUNTAS -->
+            <div class="pregunta">
+                <p>1. Programar consiste principalmente en:</p>
+                <label><input type="radio" name="p1" value="1"> Resolver problemas usando lógica</label>
+                <label><input type="radio" name="p1" value="0"> Diseñar imágenes</label>
+                <label><input type="radio" name="p1" value="0"> Editar documentos</label>
+                <label><input type="radio" name="p1" value="0"> Crear diapositivas</label>
+            </div>
+
+            <div class="pregunta">
+                <p>2. ¿Qué es un algoritmo?</p>
+                <label><input type="radio" name="p2" value="1"> Conjunto de pasos ordenados</label>
+                <label><input type="radio" name="p2" value="0"> Un lenguaje</label>
+                <label><input type="radio" name="p2" value="0"> Un error</label>
+                <label><input type="radio" name="p2" value="0"> Un archivo</label>
+            </div>
+
+            <div class="pregunta">
+                <p>3. ¿Para qué se usa una variable?</p>
+                <label><input type="radio" name="p3" value="0"> Diseñar estilos</label>
+                <label><input type="radio" name="p3" value="1"> Guardar información</label>
+                <label><input type="radio" name="p3" value="0"> Crear etiquetas</label>
+                <label><input type="radio" name="p3" value="0"> Mostrar imágenes</label>
+            </div>
+
+            <div class="pregunta">
+                <p>4. ¿Qué estructura permite tomar decisiones?</p>
+                <label><input type="radio" name="p4" value="1"> if / else</label>
+                <label><input type="radio" name="p4" value="0"> for</label>
+                <label><input type="radio" name="p4" value="0"> let</label>
+                <label><input type="radio" name="p4" value="0"> console</label>
+            </div>
+
+            <div class="pregunta">
+                <p>5. ¿Qué hace un ciclo?</p>
+                <label><input type="radio" name="p5" value="0"> Guarda datos</label>
+                <label><input type="radio" name="p5" value="1"> Repite instrucciones</label>
+                <label><input type="radio" name="p5" value="0"> Cambia estilos</label>
+                <label><input type="radio" name="p5" value="0"> Detiene el programa</label>
+            </div>
+
+            <div class="pregunta">
+                <p>6. ¿Cuál es un lenguaje de programación?</p>
+                <label><input type="radio" name="p6" value="0"> HTML</label>
+                <label><input type="radio" name="p6" value="1"> JavaScript</label>
+                <label><input type="radio" name="p6" value="0"> CSS</label>
+                <label><input type="radio" name="p6" value="0"> Canva</label>
+            </div>
+
+            <div class="pregunta">
+                <p>7. Un error lógico significa que:</p>
+                <label><input type="radio" name="p7" value="1"> El programa funciona pero da resultados
+                    incorrectos</label>
+                <label><input type="radio" name="p7" value="0"> El código no se ejecuta</label>
+                <label><input type="radio" name="p7" value="0"> Falta un archivo</label>
+                <label><input type="radio" name="p7" value="0"> El navegador falla</label>
+            </div>
+
+            <div class="pregunta">
+                <p>8. ¿Por qué es importante aprender programación?</p>
+                <label><input type="radio" name="p8" value="0"> Solo para expertos</label>
+                <label><input type="radio" name="p8" value="1"> Desarrolla pensamiento lógico</label>
+                <label><input type="radio" name="p8" value="0"> Solo para juegos</label>
+                <label><input type="radio" name="p8" value="0"> No tiene utilidad</label>
+            </div>
+
+            <div class="pregunta">
+                <p>9. ¿Qué significa depurar?</p>
+                <label><input type="radio" name="p9" value="0"> Diseñar interfaz</label>
+                <label><input type="radio" name="p9" value="1"> Encontrar y corregir errores</label>
+                <label><input type="radio" name="p9" value="0"> Ejecutar código</label>
+                <label><input type="radio" name="p9" value="0"> Guardar archivos</label>
+            </div>
+
+            <div class="pregunta">
+                <p>10. Programar permite:</p>
+                <label><input type="radio" name="p10" value="0"> Solo escribir código</label>
+                <label><input type="radio" name="p10" value="1"> Crear soluciones tecnológicas</label>
+                <label><input type="radio" name="p10" value="0"> Editar textos</label>
+                <label><input type="radio" name="p10" value="0"> Dibujar gráficos</label>
+            </div>
+
+            <button type="button" onclick="calificar()">Enviar examen</button>
+            <button type="button" onclick="reintentar()" id="btnReintentar" style="display:none;">
+                Reintentar examen
+            </button>
+
+            <!-- BOTÓN YA CONECTADO -->
+            <button type="button" id="btnConstancia" style="display:none;"
+                onclick="window.location.href='constancia.html'"><a href="#">Ver constancia final</a>  
+            </button>
+
+            <p id="resultado"></p>
+        </form>
+    </div>
+
+    <script>
+        function calificar() {
+            let puntos = 0;
+            for (let i = 1; i <= 10; i++) {
+                let r = document.querySelector(`input[name="p${i}"]:checked`);
+                if (r) puntos += parseInt(r.value);
+            }
+
+            if (puntos >= 6) {
+                localStorage.setItem("unidad3_aprobada", "true");
+                resultado.innerText = "🎉 Aprobaste con " + puntos + "/10";
+                btnConstancia.style.display = "block";
+                btnReintentar.style.display = "none";
+            } else {
+                resultado.innerText = "❌ Reprobaste con " + puntos + "/10";
+                btnReintentar.style.display = "block";
+                btnConstancia.style.display = "none";
+            }
+        }
+
+        function reintentar() {
+            formulario.reset();
+            resultado.innerText = "";
+            btnReintentar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Constancia de Acreditación - TecnoCurso</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #141828;
+            padding: 30px;
+        }
+
+        .constancia {
+            max-width: 800px;
+            margin: auto;
+            background: #d9d2e9;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #141828;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #8e7cc3;
+            margin-bottom: 20px;
+        }
+
+        .linea {
+            height: 4px;
+            background: #8e7cc3;
+            margin: 20px 0;
+        }
+
+        .datos {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #141828;
+        }
+
+        .firma {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .firma div {
+            width: 250px;
+        }
+
+        .firma .linea-firma {
+            border-top: 2px solid #141828;
+            margin-bottom: 8px;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 22px;
+            background: #8e7cc3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6f61aa;
+        }
+    </style>
+
+    <script>
+        /* VERIFICACIÓN DE APROBACIÓN */
+        if (
+            localStorage.getItem("unidad1_aprobada") !== "true" ||
+            localStorage.getItem("unidad2_aprobada") !== "true" ||
+            localStorage.getItem("unidad3_aprobada") !== "true"
+        ) {
+            alert("Debes aprobar todas las evaluaciones para obtener la constancia.");
+            window.location.href = "examen1.html";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="constancia">
+        <h1>CONSTANCIA DE ACREDITACIÓN</h1>
+        <h2>TecnoCurso</h2>
+
+        <div class="linea"></div>
+
+        <p class="datos">
+            Se hace constar que el estudiante ha acreditado satisfactoriamente las tres unidades del curso:
+        </p>
+
+        <p class="datos">
+            <strong>Fundamentos de Desarrollo Web</strong>
+        </p>
+
+        <p class="datos">
+            ✔ Unidad 1: HTML
+            <br>✔ Unidad 2: CSS
+            <br>✔ Unidad 3: Programación
+        </p>
+
+        <p class="datos">
+            Demostrando dominio básico de la estructura web, diseño visual y principios de la programación, así como
+            pensamiento lógico aplicado a la resolución de problemas.
+        </p>
+
+        <p class="datos">
+            Fecha de acreditación: <strong><span id="fecha"></span></strong>
+        </p>
+
+        <div class="firma">
+            <div>
+                <strong>Bautista del Castillo Mauricio</strong><br>
+                <div class="linea-firma"></div>
+                Responsable del proyecto<br>
+                TecnoCurso
+            </div>
+
+            <div>
+                <strong>Coordinación Académica</strong><br>
+                <div class="linea-firma"></div>
+                TecnoCurso
+            </div>
+        </div>
+
+        <button onclick="window.print()">Imprimir constancia</button>
+    </div>
+
+    <script>
+        /* FECHA AUTOMÁTICA */
+        document.getElementById("fecha").innerText =
+            new Date().toLocaleDateString();
+    </script>
+
+</body>
+
+</html>

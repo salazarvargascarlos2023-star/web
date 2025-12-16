@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 1 - HTML</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #141828;
+            padding: 20px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: auto;
+            background: #d9d2e9;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .pregunta {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            margin: 5px 0;
+        }
+
+        button {
+            background: #8e7cc3;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        #resultado {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h2>Examen Unidad 1 – HTML</h2>
+
+        <form id="formulario">
+
+            <div class="pregunta">
+                <p>1. ¿Cuál es la función principal de HTML en una página web?</p>
+                <label><input type="radio" name="p1" value="0"> Dar estilos visuales</label>
+                <label><input type="radio" name="p1" value="1"> Estructurar el contenido</label>
+                <label><input type="radio" name="p1" value="0"> Programar acciones</label>
+                <label><input type="radio" name="p1" value="0"> Conectar bases de datos</label>
+            </div>
+
+            <div class="pregunta">
+                <p>2. ¿Qué etiqueta se utiliza para definir el contenido visible?</p>
+                <label><input type="radio" name="p2" value="1"> &lt;body&gt;</label>
+                <label><input type="radio" name="p2" value="0"> &lt;head&gt;</label>
+                <label><input type="radio" name="p2" value="0"> &lt;meta&gt;</label>
+                <label><input type="radio" name="p2" value="0"> &lt;title&gt;</label>
+            </div>
+
+            <div class="pregunta">
+                <p>3. ¿Para qué sirve la etiqueta &lt;a&gt;?</p>
+                <label><input type="radio" name="p3" value="0"> Insertar imágenes</label>
+                <label><input type="radio" name="p3" value="1"> Crear enlaces</label>
+                <label><input type="radio" name="p3" value="0"> Crear listas</label>
+                <label><input type="radio" name="p3" value="0"> Insertar scripts</label>
+            </div>
+
+            <div class="pregunta">
+                <p>4. ¿Qué atributo indica la ruta de una imagen?</p>
+                <label><input type="radio" name="p4" value="1"> src</label>
+                <label><input type="radio" name="p4" value="0"> alt</label>
+                <label><input type="radio" name="p4" value="0"> href</label>
+                <label><input type="radio" name="p4" value="0"> link</label>
+            </div>
+
+            <div class="pregunta">
+                <p>5. ¿Qué significa que HTML sea un lenguaje de marcado?</p>
+                <label><input type="radio" name="p5" value="0"> Ejecuta instrucciones</label>
+                <label><input type="radio" name="p5" value="1"> Usa etiquetas para estructurar</label>
+                <label><input type="radio" name="p5" value="0"> Compila código</label>
+                <label><input type="radio" name="p5" value="0"> Maneja lógica</label>
+            </div>
+
+            <div class="pregunta">
+                <p>6. ¿Dónde se coloca el título de la pestaña del navegador?</p>
+                <label><input type="radio" name="p6" value="0"> body</label>
+                <label><input type="radio" name="p6" value="1"> title</label>
+                <label><input type="radio" name="p6" value="0"> header</label>
+                <label><input type="radio" name="p6" value="0"> meta</label>
+            </div>
+
+            <div class="pregunta">
+                <p>7. ¿Qué etiqueta se usa para listas ordenadas?</p>
+                <label><input type="radio" name="p7" value="1"> &lt;ol&gt;</label>
+                <label><input type="radio" name="p7" value="0"> &lt;ul&gt;</label>
+                <label><input type="radio" name="p7" value="0"> &lt;li&gt;</label>
+                <label><input type="radio" name="p7" value="0"> &lt;list&gt;</label>
+            </div>
+
+            <div class="pregunta">
+                <p>8. ¿Qué extensión identifica un archivo HTML?</p>
+                <label><input type="radio" name="p8" value="0"> .css</label>
+                <label><input type="radio" name="p8" value="1"> .html</label>
+                <label><input type="radio" name="p8" value="0"> .js</label>
+                <label><input type="radio" name="p8" value="0"> .php</label>
+            </div>
+
+            <div class="pregunta">
+                <p>9. ¿Qué etiqueta representa el encabezado más importante?</p>
+                <label><input type="radio" name="p9" value="1"> &lt;h1&gt;</label>
+                <label><input type="radio" name="p9" value="0"> &lt;h6&gt;</label>
+                <label><input type="radio" name="p9" value="0"> &lt;p&gt;</label>
+                <label><input type="radio" name="p9" value="0"> &lt;head&gt;</label>
+            </div>
+
+            <div class="pregunta">
+                <p>10. HTML trabaja principalmente junto con:</p>
+                <label><input type="radio" name="p10" value="0"> Word y Excel</label>
+                <label><input type="radio" name="p10" value="1"> CSS y JavaScript</label>
+                <label><input type="radio" name="p10" value="0"> SQL y PHP</label>
+                <label><input type="radio" name="p10" value="0"> Python y Java</label>
+            </div>
+
+            <button type="button" onclick="calificar()">Enviar examen</button>
+            <button type="button" onclick="reintentar()" id="btnReintentar" style="display:none;">Reintentar</button>
+            <button type="button" id="btnSiguiente" style="display:none;"><a href="#">Ir a Unidad 2</a></button>
+
+            <p id="resultado"></p>
+        </form>
+    </div>
+
+    <script>
+        function calificar() {
+            let puntos = 0;
+            for (let i = 1; i <= 10; i++) {
+                let r = document.querySelector(`input[name="p${i}"]:checked`);
+                if (r) puntos += parseInt(r.value);
+            }
+            if (puntos >= 6) {
+                localStorage.setItem("unidad1_aprobada", "true");
+                resultado.innerText = "✅ Aprobado " + puntos + "/10";
+                btnSiguiente.style.display = "block";
+                btnReintentar.style.display = "none";
+            } else {
+                resultado.innerText = "❌ Reprobado " + puntos + "/10";
+                btnReintentar.style.display = "block";
+                btnSiguiente.style.display = "none";
+            }
+        }
+        function reintentar() {
+            formulario.reset();
+            resultado.innerText = "";
+            btnReintentar.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

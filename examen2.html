@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 2 - CSS</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #141828;
+            padding: 20px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: auto;
+            background: #d9d2e9;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .pregunta {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            margin: 5px 0;
+        }
+
+        button {
+            background: #8e7cc3;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        #resultado {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        if (localStorage.getItem("unidad1_aprobada") !== "true") {
+            alert("Debes aprobar la Unidad 1 para continuar.");
+            window.location.href = "examen1.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h2>Examen Unidad 2 – CSS</h2>
+
+        <form id="formulario">
+
+            <div class="pregunta">
+                <p>1. ¿Cuál es el propósito principal de CSS dentro de un sitio web?</p>
+                <label><input type="radio" name="p1" value="0"> Definir la estructura</label>
+                <label><input type="radio" name="p1" value="1"> Controlar la apariencia visual</label>
+                <label><input type="radio" name="p1" value="0"> Ejecutar algoritmos</label>
+                <label><input type="radio" name="p1" value="0"> Gestionar bases de datos</label>
+            </div>
+
+            <div class="pregunta">
+                <p>2. ¿Qué selector usarías para aplicar estilo a TODOS los elementos?</p>
+                <label><input type="radio" name="p2" value="1"> *</label>
+                <label><input type="radio" name="p2" value="0"> .all</label>
+                <label><input type="radio" name="p2" value="0"> #total</label>
+                <label><input type="radio" name="p2" value="0"> body</label>
+            </div>
+
+            <div class="pregunta">
+                <p>3. ¿Cuál propiedad controla el espacio EXTERNO de un elemento?</p>
+                <label><input type="radio" name="p3" value="1"> margin</label>
+                <label><input type="radio" name="p3" value="0"> padding</label>
+                <label><input type="radio" name="p3" value="0"> border</label>
+                <label><input type="radio" name="p3" value="0"> spacing</label>
+            </div>
+
+            <div class="pregunta">
+                <p>4. ¿Qué ocurre si dos reglas CSS afectan al mismo elemento?</p>
+                <label><input type="radio" name="p4" value="0"> Se anulan ambas</label>
+                <label><input type="radio" name="p4" value="1"> Se aplica la de mayor especificidad</label>
+                <label><input type="radio" name="p4" value="0"> Se aplica la primera</label>
+                <label><input type="radio" name="p4" value="0"> No se aplica ninguna</label>
+            </div>
+
+            <div class="pregunta">
+                <p>5. ¿Cuál es la forma correcta de enlazar CSS externo?</p>
+                <label><input type="radio" name="p5" value="1"> &lt;link rel="stylesheet"&gt;</label>
+                <label><input type="radio" name="p5" value="0"> &lt;style src=""&gt;</label>
+                <label><input type="radio" name="p5" value="0"> &lt;css&gt;</label>
+                <label><input type="radio" name="p5" value="0"> &lt;script&gt;</label>
+            </div>
+
+            <div class="pregunta">
+                <p>6. ¿Qué unidad se adapta al tamaño de pantalla?</p>
+                <label><input type="radio" name="p6" value="0"> px</label>
+                <label><input type="radio" name="p6" value="1"> %</label>
+                <label><input type="radio" name="p6" value="0"> cm</label>
+                <label><input type="radio" name="p6" value="0"> pt</label>
+            </div>
+
+            <div class="pregunta">
+                <p>7. ¿Para qué se usa media queries?</p>
+                <label><input type="radio" name="p7" value="0"> Animaciones</label>
+                <label><input type="radio" name="p7" value="1"> Diseño responsive</label>
+                <label><input type="radio" name="p7" value="0"> Conectar JS</label>
+                <label><input type="radio" name="p7" value="0"> Crear variables</label>
+            </div>
+
+            <div class="pregunta">
+                <p>8. ¿Qué propiedad cambia el fondo?</p>
+                <label><input type="radio" name="p8" value="1"> background-color</label>
+                <label><input type="radio" name="p8" value="0"> font-color</label>
+                <label><input type="radio" name="p8" value="0"> text-color</label>
+                <label><input type="radio" name="p8" value="0"> color-bg</label>
+            </div>
+
+            <div class="pregunta">
+                <p>9. ¿Qué selector tiene MAYOR prioridad?</p>
+                <label><input type="radio" name="p9" value="0"> Etiqueta</label>
+                <label><input type="radio" name="p9" value="1"> ID</label>
+                <label><input type="radio" name="p9" value="0"> Clase</label>
+                <label><input type="radio" name="p9" value="0"> Universal</label>
+            </div>
+
+            <div class="pregunta">
+                <p>10. CSS es clave porque:</p>
+                <label><input type="radio" name="p10" value="0"> Ejecuta programas</label>
+                <label><input type="radio" name="p10" value="1"> Mejora la experiencia del usuario</label>
+                <label><input type="radio" name="p10" value="0"> Almacena datos</label>
+                <label><input type="radio" name="p10" value="0"> Crea servidores</label>
+            </div>
+
+            <button type="button" onclick="calificar()">Enviar examen</button>
+            <button type="button" onclick="reintentar()" id="btnReintentar" style="display:none;">Reintentar</button>
+            <button type="button" id="btnSiguiente" style="display:none;"><a
+                    href="#">Ir
+                a Unidad 3</a></button>
+
+            <p id="resultado"></p>
+        </form>
+    </div>
+
+    <script>
+        function calificar() {
+            let puntos = 0;
+            for (let i = 1; i <= 10; i++) {
+                let r = document.querySelector(`input[name="p${i}"]:checked`);
+                if (r) puntos += parseInt(r.value);
+            }
+
+            if (puntos >= 6) {
+                localStorage.setItem("unidad2_aprobada", "true");
+                resultado.innerText = "✅ Aprobado " + puntos + "/10";
+                btnSiguiente.style.display = "block";
+                btnReintentar.style.display = "none";
+            } else {
+                resultado.innerText = "❌ Reprobado " + puntos + "/10";
+                btnReintentar.style.display = "block";
+                btnSiguiente.style.display = "none";
+            }
+        }
+
+        function reintentar() {
+            formulario.reset();
+            resultado.innerText = "";
+            btnReintentar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
